@@ -2041,3 +2041,900 @@ Processing by Devise::SessionsController#new as HTML
   Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.5ms)
   Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (24.6ms)
 Completed 200 OK in 543ms (Views: 540.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:08:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.1) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.1) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAuthorizations (20161125130655)
+  [1m[35m (0.4ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /projects/Rect-task/db/migrate/20161125130655_create_authorizations.rb:9)
+  [1m[36m (30.4ms)[0m  [1mCREATE TABLE "authorizations" ("id" serial primary key, "provider" character varying, "uid" character varying, "user_id" integer, "token" character varying, "secret" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161125130655"]]
+  [1m[36m (15.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'authorizations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'developers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'oauth_access_grants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'oauth_access_tokens'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'oauth_applications'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'projects'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:12:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1593.6ms)
+Completed 500 Internal Server Error in 1840ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (undefined local variable or method `user_facebook_omniauth_authorize_path' for #<#<Class:0x00000005353298>:0x00000005352578>):
+    18:   </div>
+    19: <% end %>
+    20: 
+    21: <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+    22: 
+    23: <%= render "devise/shared/links" %>
+  app/views/devise/sessions/new.html.erb:21:in `_app_views_devise_sessions_new_html_erb___331805116435871617_43410820'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.3ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:12:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (114.6ms)
+Completed 200 OK in 1219ms (Views: 1217.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fb_login-ecfd408166f39ee518d200e9b0689f5dc58cfffc08ef9416f8d8c3d2578d2ed9.png" for 10.0.2.2 at 2016-11-25 13:12:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:12:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:12:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:14:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:14:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:16:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1191.4ms)
+Completed 200 OK in 1918ms (Views: 1845.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:16:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:16:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:16:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook/callback?code=[FILTERED]&state=f89192127458d3709f2dea3bc177729e1ce8bcad91bd7530" for 10.0.2.2 at 2016-11-25 13:16:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+Faraday::ConnectionFailed (Network is unreachable - connect(2) for "graph.facebook.com" port 443):
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/net/http.rb:879:in `initialize'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/net/http.rb:879:in `open'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/net/http.rb:879:in `block in connect'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/timeout.rb:74:in `timeout'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/net/http.rb:878:in `connect'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/net/http.rb:863:in `do_start'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/net/http.rb:852:in `start'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/net/http.rb:1375:in `request'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/net/http.rb:1133:in `get'
+  faraday (0.9.2) lib/faraday/adapter/net_http.rb:80:in `perform_request'
+  faraday (0.9.2) lib/faraday/adapter/net_http.rb:40:in `block in call'
+  faraday (0.9.2) lib/faraday/adapter/net_http.rb:87:in `with_net_http_connection'
+  faraday (0.9.2) lib/faraday/adapter/net_http.rb:32:in `call'
+  faraday (0.9.2) lib/faraday/request/url_encoded.rb:15:in `call'
+  faraday (0.9.2) lib/faraday/rack_builder.rb:139:in `build_response'
+  faraday (0.9.2) lib/faraday/connection.rb:377:in `run_request'
+  oauth2 (1.2.0) lib/oauth2/client.rb:93:in `request'
+  oauth2 (1.2.0) lib/oauth2/access_token.rb:109:in `request'
+  oauth2 (1.2.0) lib/oauth2/access_token.rb:116:in `get'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:54:in `raw_info'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:27:in `block in <class:Facebook>'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:105:in `instance_eval'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:105:in `block in compile_stack'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:104:in `each'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:104:in `inject'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:104:in `compile_stack'
+  (eval):7:in `uid_stack'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:317:in `uid'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:333:in `auth_hash'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:361:in `callback_phase'
+  omniauth-oauth2 (1.4.0) lib/omniauth/strategies/oauth2.rb:75:in `callback_phase'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.7ms)
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:17:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:17:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook/callback?code=[FILTERED]&state=122b16a665c4c661e0c1a02e050d576786f5bdf1178e65b1" for 10.0.2.2 at 2016-11-25 13:17:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"[FILTERED]", "state"=>"122b16a665c4c661e0c1a02e050d576786f5bdf1178e65b1"}
+  [1m[35mAuthorization Load (1.0ms)[0m  SELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."provider" = $1 AND "authorizations"."uid" = $2 AND "authorizations"."token" = $3 AND "authorizations"."secret" IS NULL  ORDER BY "authorizations"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBAHpHQh5zh1LXJ9ce4qq0TTfkrcwEHLckHNuVdirGYZAkFltp3QfZAjnZAh2xH3iefsL0lU3TZAlZBt1XAZB8Magq7bGQUZA3M9ubO9izr5YaqCC3sH3fZBkK3QgWnfLCyXow6YGuDJQy3VuvVnK86zoZD"]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE (email = 'thiyagarajannv@yahoo.com')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 336ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:17:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:17:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (95.4ms)
+Completed 200 OK in 512ms (Views: 509.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:17:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:17:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook/callback?code=[FILTERED]&state=1463ac7ef400323854e84f303c661087210b3f894d09dcff" for 10.0.2.2 at 2016-11-25 13:17:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"[FILTERED]", "state"=>"1463ac7ef400323854e84f303c661087210b3f894d09dcff"}
+  [1m[35mAuthorization Load (1.1ms)[0m  SELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."provider" = $1 AND "authorizations"."uid" = $2 AND "authorizations"."token" = $3 AND "authorizations"."secret" IS NULL  ORDER BY "authorizations"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBAIAVMJdfoKMDmyVnb62Jwok5Rmpg5N7slZAvOeHhunNEtw5Xm4N09ZBZCtC1pKeIcwub4eZBmErh3D5UkFB6lCpFBDzZAmUYHSWZCXxsgUomeM7s9ZCjQmKReWuzEh93hM0YhmBd8Xtz4wHg0Qf5QMZD"]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE (email = 'thiyagarajannv@yahoo.com')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 162ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:18:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:18:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (324.4ms)
+Completed 200 OK in 1115ms (Views: 1111.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:19:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DevelopersController#index as HTML
+Completed 401 Unauthorized in 56ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:19:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (632.5ms)
+Completed 200 OK in 1480ms (Views: 1451.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:19:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:19:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook/callback?code=[FILTERED]&state=8666f99a219b2b488ed6cb5944d472f89b787376cd6844a7" for 10.0.2.2 at 2016-11-25 13:19:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"[FILTERED]", "state"=>"8666f99a219b2b488ed6cb5944d472f89b787376cd6844a7"}
+  [1m[35mAuthorization Load (0.6ms)[0m  SELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."provider" = $1 AND "authorizations"."uid" = $2 AND "authorizations"."token" = $3 AND "authorizations"."secret" IS NULL  ORDER BY "authorizations"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBAOqoRlQnpiSidrJpRAxmLoEcQnilWO5Cspit6EkGNKGiF4yiqrftZBpDsEaZBekXlAyzC0VkA1Xm2DD8zwGj6hSjk0HgemA0KnVWhWTpsKOLgZCZChHsIvYHxMv7H7HABp8P2iL1S0ADPJNqIYoZD"]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE (email = 'thiyagarajannv@yahoo.com')  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 293ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:20:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:20:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (39.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (131.1ms)
+Completed 200 OK in 688ms (Views: 685.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:22:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DevelopersController#index as HTML
+Completed 401 Unauthorized in 58ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:22:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (651.8ms)
+Completed 200 OK in 1276ms (Views: 1244.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:23:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:23:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook/callback?code=[FILTERED]&state=50e935f06fec60140e6f9bb99d1970cb3ddcbabfe92c3c8f" for 10.0.2.2 at 2016-11-25 13:23:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"[FILTERED]", "state"=>"50e935f06fec60140e6f9bb99d1970cb3ddcbabfe92c3c8f"}
+  [1m[35mAuthorization Load (0.9ms)[0m  SELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."provider" = $1 AND "authorizations"."uid" = $2 AND "authorizations"."token" = $3 AND "authorizations"."secret" IS NULL  ORDER BY "authorizations"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBACoxVlIRPbS06tPJgDENCWB0ZC40gH2bDANAZB0ZCl96OObOjrAyIcNA6iwnjkoZBsqbB3tGZCCkDVcUAOx8YUCbIlkbGMGy1oIR3m4fGusumYoGBwdlwOa8c50uiZAnZBZBi8CiCAVETCJYo29Ca9YZD"]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE (email = 'thiyagarajannv@yahoo.com')  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("encrypted_password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["encrypted_password", "$2a$10$K82dfUAy604qGGm6iVN/..q5BRIvlDd8JJFfwGH3mO5N8nvqaeRzi"], ["email", "thiyagarajannv@yahoo.com"], ["created_at", "2016-11-25 13:23:31.263281"], ["updated_at", "2016-11-25 13:23:31.263281"]]
+  [1m[35m (51.1ms)[0m  COMMIT
+  [1m[36mAuthorization Load (0.5ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "authorizations" ("provider", "uid", "token", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBACoxVlIRPbS06tPJgDENCWB0ZC40gH2bDANAZB0ZCl96OObOjrAyIcNA6iwnjkoZBsqbB3tGZCCkDVcUAOx8YUCbIlkbGMGy1oIR3m4fGusumYoGBwdlwOa8c50uiZAnZBZBi8CiCAVETCJYo29Ca9YZD"], ["user_id", 1], ["created_at", "2016-11-25 13:23:31.329893"], ["updated_at", "2016-11-25 13:23:31.329893"]]
+  [1m[35m (0.6ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/
+Completed 302 Found in 394ms (ActiveRecord: 61.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:23:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:23:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (193.2ms)
+Completed 200 OK in 775ms (Views: 773.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:24:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:24:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook/callback?code=[FILTERED]&state=4501ae3156e209f2a5b7858838bae99ce55bbaad119be3b9" for 10.0.2.2 at 2016-11-25 13:24:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"[FILTERED]", "state"=>"4501ae3156e209f2a5b7858838bae99ce55bbaad119be3b9"}
+  [1m[36mAuthorization Load (0.3ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."provider" = $1 AND "authorizations"."uid" = $2 AND "authorizations"."token" = $3 AND "authorizations"."secret" IS NULL  ORDER BY "authorizations"."id" ASC LIMIT 1[0m  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBAKhNbFuZCivl6czAqvZBCsg4DaVsjTwMCzscKs529T5rLNqy1ug24fFgrzmZAOGv2AbTeQFP213NcHZBY7eBHXZBpaRCHc9YyuMuZABr1edR1vdLVQOHeBOsVIZCi6HWudbuMNdr6tMvI0IIM5ZAIqAZD"]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE (email = 'thiyagarajannv@yahoo.com')  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAuthorization Load (1.3ms)[0m  [1mSELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "authorizations" ("provider", "uid", "token", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBAKhNbFuZCivl6czAqvZBCsg4DaVsjTwMCzscKs529T5rLNqy1ug24fFgrzmZAOGv2AbTeQFP213NcHZBY7eBHXZBpaRCHc9YyuMuZABr1edR1vdLVQOHeBOsVIZCi6HWudbuMNdr6tMvI0IIM5ZAIqAZD"], ["user_id", 1], ["created_at", "2016-11-25 13:24:40.465179"], ["updated_at", "2016-11-25 13:24:40.465179"]]
+  [1m[35mSQL (0.8ms)[0m  UPDATE "authorizations" SET "provider" = $1, "uid" = $2, "token" = $3, "user_id" = $4, "created_at" = $5, "updated_at" = $6, "id" = $7 WHERE "authorizations"."id" = $8  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBAKhNbFuZCivl6czAqvZBCsg4DaVsjTwMCzscKs529T5rLNqy1ug24fFgrzmZAOGv2AbTeQFP213NcHZBY7eBHXZBpaRCHc9YyuMuZABr1edR1vdLVQOHeBOsVIZCi6HWudbuMNdr6tMvI0IIM5ZAIqAZD"], ["user_id", 1], ["created_at", "2016-11-25 13:24:40.465179"], ["updated_at", "2016-11-25 13:24:40.465179"], ["id", 2], ["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (107.0ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7  [["last_sign_in_at", "2016-11-25 13:24:42.269654"], ["current_sign_in_at", "2016-11-25 13:24:42.269654"], ["last_sign_in_ip", "10.0.2.2/32"], ["current_sign_in_ip", "10.0.2.2/32"], ["sign_in_count", 1], ["updated_at", "2016-11-25 13:24:42.275218"], ["id", 1]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 1959ms (ActiveRecord: 121.3ms)
+
+NameError (undefined local variable or method `new_pet_path' for #<OmniauthCallbacksController:0x000000021e28a8>):
+  app/controllers/omniauth_callbacks_controller.rb:12:in `all'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.3ms)
+
+
+Started GET "/users/auth/facebook/callback?code=[FILTERED]&state=4501ae3156e209f2a5b7858838bae99ce55bbaad119be3b9" for 10.0.2.2 at 2016-11-25 13:25:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OmniauthCallbacksController#failure as HTML
+  Parameters: {"code"=>"[FILTERED]", "state"=>"4501ae3156e209f2a5b7858838bae99ce55bbaad119be3b9"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:25:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (117.5ms)
+Completed 200 OK in 695ms (Views: 677.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:25:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:25:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook/callback?code=[FILTERED]&state=b7f399c4a889dc61095c99990ff1feee8aa7cd8ac7a2338e" for 10.0.2.2 at 2016-11-25 13:25:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"[FILTERED]", "state"=>"b7f399c4a889dc61095c99990ff1feee8aa7cd8ac7a2338e"}
+  [1m[35mAuthorization Load (0.7ms)[0m  SELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."provider" = $1 AND "authorizations"."uid" = $2 AND "authorizations"."token" = $3 AND "authorizations"."secret" IS NULL  ORDER BY "authorizations"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBAI7hTxUB72KXjxAVwwVq3BZAXRQZA5NgakLZA3ngAEpMk4nhru74fmjVWOSeo0hVekhBA8ZAy8c6bZCq4sMxPBJLIce5VgU203GeglaXJREdMinX5zgPZBKksm1hB1gEZA4bN4KlKuXELpMwujEPC0ZD"]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE (email = 'thiyagarajannv@yahoo.com')  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.8ms)[0m  SELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2016-11-25 13:25:36.039273"], ["sign_in_count", 2], ["updated_at", "2016-11-25 13:25:36.042391"], ["id", 1]]
+  [1m[35m (2.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 228ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:25:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.8ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 876ms (Views: 843.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/developers" for 10.0.2.2 at 2016-11-25 13:25:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 403ms (Views: 398.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 10.0.2.2 at 2016-11-25 13:25:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.9ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered collection (0.0ms)
+  Rendered projects/index.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 582ms (Views: 539.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:30:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+    18:     = link_to('Login', new_user_session_path)
+    19: 
+    20:       %li= link_to 'Developers', developers_path
+    21:         %li= link_to 'Projects', projects_path
+    22: 
+    23:     = yield
+  app/views/layouts/application.html.haml:21
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:31:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+    18:             = link_to('Login', new_user_session_path)
+    19: 
+    20:       %li= link_to 'Developers', developers_path
+    21:         %li= link_to 'Projects', projects_path
+    22: 
+    23:     = yield
+  app/views/layouts/application.html.haml:21
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+    18:             = link_to('Login', new_user_session_path)
+    19: 
+    20:       %li= link_to 'Developers', developers_path
+    21:         %li= link_to 'Projects', projects_path
+    22: 
+    23:     = yield
+  app/views/layouts/application.html.haml:21
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:31:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+    18:           = link_to('Login', new_user_session_path)
+    19: 
+    20:       %li= link_to 'Developers', developers_path
+    21:         %li= link_to 'Projects', projects_path
+    22: 
+    23:     = yield
+  app/views/layouts/application.html.haml:21
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:31:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+    18:           = link_to('Login', new_user_session_path)
+    19: 
+    20:       %li= link_to 'Developers', developers_path
+    21:         %li= link_to 'Projects', projects_path
+    22: 
+    23:     = yield
+  app/views/layouts/application.html.haml:21
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:31:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+    18:           = link_to('Login', new_user_session_path)
+    19: 
+    20:       %li= link_to 'Developers', developers_path
+    21:         %li= link_to 'Projects', projects_path
+    22: 
+    23:     = yield
+  app/views/layouts/application.html.haml:21
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:31:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.8ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+    18:           = link_to('Login', new_user_session_path)
+    19: 
+    20:       %li= link_to 'Developers', developers_path
+    21:         %li= link_to 'Projects', projects_path
+    22: 
+    23:     = yield
+  app/views/layouts/application.html.haml:21
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:31:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 373ms (Views: 368.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:31:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 434ms (Views: 429.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2016-11-25 13:31:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YiwfNnV6DYNPLSCwVfDhCwzzAgfr+cgBwYYEue0HGHlWUI5qd99mb+dTxwv2r2+GHZa5uDNvYifL/DNyBbe/uA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 441ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:31:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:31:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (491.3ms)
+Completed 200 OK in 963ms (Views: 954.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:31:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (250.7ms)
+Completed 200 OK in 713ms (Views: 711.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:31:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:31:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook/callback?code=[FILTERED]&state=6859b4dcaf8f5dfca7af4f250bf402a44fa37a4b4d202313" for 10.0.2.2 at 2016-11-25 13:31:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"[FILTERED]", "state"=>"6859b4dcaf8f5dfca7af4f250bf402a44fa37a4b4d202313"}
+  [1m[35mAuthorization Load (1.0ms)[0m  SELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."provider" = $1 AND "authorizations"."uid" = $2 AND "authorizations"."token" = $3 AND "authorizations"."secret" IS NULL  ORDER BY "authorizations"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBAN62nKZBZAxDlWrjzW6We15abtR7mI32vtAxxz6y734K79CoXEwDGas8cZCg3ABgHhinRD5ENZC6lDYxmkbFVu5iZBsXZBMkKZBxtZCCjbZCg2PYZBdZC453EoycZCu1qPYq8JOLKjyOLdtKvCO4CyRcrgEZD"]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE (email = 'thiyagarajannv@yahoo.com')  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorization Load (1.0ms)[0m  SELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2016-11-25 13:25:36.039273"], ["current_sign_in_at", "2016-11-25 13:32:04.017857"], ["sign_in_count", 3], ["updated_at", "2016-11-25 13:32:04.022424"], ["id", 1]]
+  [1m[35m (2.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 39ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:32:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 521ms (Views: 515.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:32:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 471ms (Views: 466.7ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2016-11-25 13:32:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4W4X8YfQViPj4kzUygpmVwUxDmLsPv04k4pcvH0cRnSaLIisnQcJsLOxs5+pLtT6fmffSoN1gBP1iNIypNJ58g=="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:32:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2016-11-25 13:32:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (109.1ms)
+Completed 200 OK in 536ms (Views: 534.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:32:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook" for 10.0.2.2 at 2016-11-25 13:32:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/auth/facebook/callback?code=[FILTERED]&state=cb5d42e75fba6595ee430d890ce800849e6589e312438868" for 10.0.2.2 at 2016-11-25 13:32:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"[FILTERED]", "state"=>"cb5d42e75fba6595ee430d890ce800849e6589e312438868"}
+  [1m[35mAuthorization Load (1.0ms)[0m  SELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."provider" = $1 AND "authorizations"."uid" = $2 AND "authorizations"."token" = $3 AND "authorizations"."secret" IS NULL  ORDER BY "authorizations"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "843609620"], ["token", "EAACdm1kNUFQBADILq333pOlXJLh75k1X4ijmWzUCfBmoKKcJpbr7yMA0hqxHCvrVJV3J3D5r2yvJ4jrhmhFXZAklbb044Rp3H8bBh75EU1wCKMPbuqMCYnaT1nuXWZBqns9ph1Apq7taKZB6ZAKlkdHkLujRucMZD"]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE (email = 'thiyagarajannv@yahoo.com')  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAuthorization Load (0.7ms)[0m  SELECT  "authorizations".* FROM "authorizations" WHERE "authorizations"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2016-11-25 13:32:04.017857"], ["current_sign_in_at", "2016-11-25 13:32:44.983446"], ["sign_in_count", 4], ["updated_at", "2016-11-25 13:32:44.987556"], ["id", 1]]
+  [1m[35m (2.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-11-25 13:32:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DevelopersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered developers/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 460ms (Views: 454.7ms | ActiveRecord: 1.1ms)

@@ -1,0 +1,7 @@
+development:
+  facebook_key: '173290539536468'
+  facebook_secret: '7bfef870575c2b5bd7fae0e561a373e0'
+
+production:
+  facebook_key: '895285040509549'
+  facebook_secret: 'd3dd68106f3d59f83a43be16526e489f'

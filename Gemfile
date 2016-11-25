@@ -17,6 +17,11 @@ gem 'devise'
 gem 'simple_form'
 gem 'haml-rails'
 
+#social login
+gem 'omniauth', '1.3.1'
+gem 'omniauth-facebook', '4.0.0'
+gem 'koala', '2.4.0'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'byebug'
