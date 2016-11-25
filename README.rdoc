@@ -1,0 +1,35 @@
+== README
+
+= Tasks:
+
+- Implement authentication using OAuth.
+
+- There are some failing tests in the suite. Make sure all tests are passing (change the code - not the tests!)
+
+- There is not flash messages displaying. Add it to the application layout.
+
+- Go to developers list. Currently, only first name is shown for each developer. Make sure to display their full names (remember about each develper's show page).
+
+- Implement a simple voting system. Users should be able to vote for each project (and remove their vote later). User should be able to vote only once for each project. Vote number should be visible on the projects list.
+
+- Every project on the projects list should have its developer's full name displayed.
+
+- Go to developers list. There is projects count displayed for each developer. What's wrong?
+
+- Add avatars upload to developers.
+
+- For each developer on the developers list, display the created_at date with format 'DD/MM/YYYY'
+
+- Add Language model. Every project can use many languages. Add few test languages (you can do it in console or in the seeds file, you don't have to implement any form for that). Make sure you can choose languages while creating a new project. For each language, user should be able to display the list of projects using selected language.
+
+- Add 'admin' role for users. Admins should be able to delete other users / languages.
+
+- Use Github public API to fetch some developers and projects.
+
+- Implement some search mechanism. The choice of search engine / database is up to you.
+
+= Tips:
+
+- There are some pieces of code that are not perfect. Can you improve the code?
+- Some gems that may be helpful: Draper, rest-client, will-paginate, CarrierWave.
+- We will appreciate if you write test for your code.

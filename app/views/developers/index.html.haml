@@ -1,0 +1,16 @@
+%h1 Developers
+
+.section
+  = link_to 'Add developer', new_developer_path
+  %br/
+
+%h2 All developers
+- @developers.each do |developer|
+  .developer
+    = link_to developer.first_name, developer_path(developer)
+    %br/
+    Project count:
+    = developer.projects.count
+    %br/
+    Joined at:
+
