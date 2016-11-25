@@ -3,5 +3,6 @@
 = simple_form_for @developer, html: { multipart: true } do |f|
   = f.input :first_name
   = f.input :last_name
+  // Adding developer avatar
   = f.input :avatar, as: :file
   = f.submit :save

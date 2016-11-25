@@ -1,6 +1,7 @@
 <h2>Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <!-- User login with FaceBook -->
     <%- if devise_mapping.omniauthable? %>
         <%- resource_class.omniauth_providers.each do |provider| %>
             <%= link_to (image_tag 'fb_login.png', class: 'img-responsive'), omniauth_authorize_path(resource_name, provider), :class => "popup social #{provider}", :"data-width" => 600, :"data-height" => 400 %>

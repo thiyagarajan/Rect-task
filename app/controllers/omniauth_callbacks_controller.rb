@@ -1,3 +1,5 @@
+# User Facebook Login
+
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   skip_before_filter :authenticate_user!
