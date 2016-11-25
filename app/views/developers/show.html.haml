@@ -1,4 +1,7 @@
-%h1= @developer.first_name
+%h1= @developer.full_name
+
+.avatar
+  = image_tag @developer.avatar.url(:medium)
 
 .projects
   %h2 Projects

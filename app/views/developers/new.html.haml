@@ -1,6 +1,7 @@
 %h1 New developer
 
-= simple_form_for @developer do |f|
+= simple_form_for @developer, html: { multipart: true } do |f|
   = f.input :first_name
   = f.input :last_name
+  = f.input :avatar, as: :file
   = f.submit :save

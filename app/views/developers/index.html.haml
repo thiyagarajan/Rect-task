@@ -9,6 +9,8 @@
   .developer
     = link_to developer.full_name, developer_path(developer)
     %br/
+    = image_tag developer.avatar.url(:medium)
+    %br/
     Project count:
     = developer.projects.count
     %br/
