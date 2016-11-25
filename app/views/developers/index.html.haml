@@ -7,7 +7,7 @@
 %h2 All developers
 - @developers.each do |developer|
   .developer
-    = link_to developer.first_name, developer_path(developer)
+    = link_to developer.full_name, developer_path(developer)
     %br/
     Project count:
     = developer.projects.count
